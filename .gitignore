@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build
+build/
+
+# Environment
+.env
+
+# Typing
+next-env.d.ts
+
+# Next.js
+.next/
+out/
+
+# Misc.
+.DS_Store
