@@ -9,6 +9,10 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   font-size: 10px;
 }
