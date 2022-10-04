@@ -16,7 +16,11 @@
     "sass": "^1.55.0"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@types/node": "18.7.23",
+=======
+    "@types/node": "18.7.19",
+>>>>>>> here
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "husky": "^8.0.1",
