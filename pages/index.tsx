@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
+import ScheduleGrid from "../components/ScheduleGrid/ScheduleGrid";
 import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
@@ -9,6 +10,7 @@ const Home: NextPage = () => {
         <title>Title</title>
       </Head>
       <h1>Hello World</h1>
+      <ScheduleGrid />
     </div>
   );
 };

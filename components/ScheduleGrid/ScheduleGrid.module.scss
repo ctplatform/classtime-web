@@ -1,0 +1,9 @@
+// ScheduleGrid.module.scss
+.container {
+  .row {
+    display: flex;
+  }
+  .col {
+    flex: 50%;
+  }
+}
