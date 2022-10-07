@@ -1,15 +1,15 @@
-// ScheduleGrid.tsx
 import styles from "./ScheduleGrid.module.scss";
 
 function ScheduleGrid() {
   return (
     <div className={styles.container}>
       <div className={styles.row}>
-        <div className={styles.col}>Monday</div>
-        <div className={styles.col}>Tuesday</div>
-        <div className={styles.col}>Wednesday</div>
-        <div className={styles.col}>Thursday</div>
-        <div className={styles.col}>Friday</div>
+        <div className={styles.scheduleCol}>Monday</div>
+        <div className={styles.scheduleCol}>Tuesday</div>
+        <div className={styles.scheduleCol}>Wednesday</div>
+        <div className={styles.scheduleCol}>Thursday</div>
+        <div className={styles.scheduleCol}>Friday</div>
+        <div className={styles.chatCol}>Chat Window</div>
       </div>
     </div>
   );

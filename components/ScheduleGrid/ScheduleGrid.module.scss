@@ -1,9 +1,17 @@
-// ScheduleGrid.module.scss
 .container {
   .row {
     display: flex;
   }
-  .col {
-    flex: 50%;
+  .scheduleCol {
+    padding-top: 5%;
+    padding-left: 5%;
+    width: 25%;
+    font-size: medium;
+  }
+  .chatCol {
+    padding-top: 5%;
+    padding-left: 5%;
+    width: 75%;
+    font-size: x-large;
   }
 }
