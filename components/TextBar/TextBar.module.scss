@@ -1,0 +1,25 @@
+.container {
+  border: 1px solid;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  width: 30rem;
+  cursor: pointer;
+  padding-bottom: 1rem;
+
+  .input {
+    border: none;
+    width: 90%;
+    height: 100%;
+    font-size: 15px;
+    margin-right: 0.2rem;
+  }
+
+  .input:focus {
+    outline: none;
+  }
+
+  .icon {
+    transform: rotate(-30deg);
+    font-size: 18px;
+  }
+}
