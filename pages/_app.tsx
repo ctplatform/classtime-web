@@ -1,9 +1,9 @@
 import { AppProps } from "next/app";
-import React from "react";
+import CourseBlock from "../components/courseblock";
 import "../styles/globals.scss";
 
 function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return <CourseBlock />;
 }
 
 export default App;
