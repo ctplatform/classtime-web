@@ -5,32 +5,32 @@
 
 .container,
 .highlight {
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 
 .container {
-  height: 65px;
-  width: 165px;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-  padding-left: 5px;
+  height: 6.5rem;
+  width: 16.5rem;
+  box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.2);
+  padding-left: 0.5rem;
   flex-direction: row;
   align-items: center;
-  column-gap: 8px;
+  column-gap: 0.8rem;
 }
 
 .highlight {
   background-color: red;
-  height: 45px;
-  width: 5px;
+  height: 4.8rem;
+  width: 0.5rem;
 }
 
 .main {
   flex-direction: column;
-  row-gap: 15px;
+  row-gap: 1.5rem;
 }
 
 .info {
-  margin-top: 7px;
+  margin-top: 0.4rem;
 }
 
 .info p {
@@ -39,9 +39,9 @@
 
 .section,
 .type {
-  font-size: 5px;
+  font-size: 0.5rem;
 }
 
 .name {
-  font-size: 8px;
+  font-size: 0.8rem;
 }
