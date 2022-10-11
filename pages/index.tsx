@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Title</title>
+        <title>ClassTime!</title>
       </Head>
       <ScheduleGrid />
     </div>

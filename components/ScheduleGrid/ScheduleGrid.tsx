@@ -4,12 +4,25 @@ function ScheduleGrid() {
   return (
     <div className={styles.container}>
       <div className={styles.row}>
-        <div className={styles.scheduleCol}>Monday</div>
-        <div className={styles.scheduleCol}>Tuesday</div>
-        <div className={styles.scheduleCol}>Wednesday</div>
-        <div className={styles.scheduleCol}>Thursday</div>
-        <div className={styles.scheduleCol}>Friday</div>
-        <div className={styles.chatCol}>Chat Window</div>
+        <div className={styles.scheduleCol}>
+          <div className={styles.rect}>Monday</div>
+        </div>
+        <div className={styles.vertline}></div>
+        <div className={styles.scheduleCol}>
+          <div className={styles.rect}>Tuesday</div>
+        </div>
+        <div className={styles.vertline}></div>
+        <div className={styles.scheduleCol}>
+          <div className={styles.rect}>Wednesday</div>
+        </div>
+        <div className={styles.vertline}></div>
+        <div className={styles.scheduleCol}>
+          <div className={styles.rect}>Thursday</div>
+        </div>
+        <div className={styles.vertline}></div>
+        <div className={styles.scheduleCol}>
+          <div className={styles.rect}>Friday</div>
+        </div>
       </div>
     </div>
   );

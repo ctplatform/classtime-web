@@ -1,17 +1,21 @@
 .container {
   .row {
     display: flex;
+    padding-left: 5%;
+    padding-top: 5%;
   }
   .scheduleCol {
-    padding-top: 5%;
-    padding-left: 5%;
     width: 25%;
     font-size: medium;
   }
-  .chatCol {
-    padding-top: 5%;
-    padding-left: 5%;
-    width: 75%;
-    font-size: x-large;
+  .vertline {
+    border-left: 2px solid black;
+    height: auto;
+  }
+  .rect {
+    height: 60rem;
+    width: 20rem;
+    border: 0.5rem solid black;
+    margin-left: 1rem;
   }
 }
