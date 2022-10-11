@@ -9,6 +9,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Title</title>
       </Head>
+      <ChatWindow name="Physics" messages="asdf, fghj, zxcv" />
     </div>
   );
 };
