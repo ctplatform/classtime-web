@@ -6,14 +6,15 @@ const ChatMessage = () => {
       <>
         <div className={styles.chatMessageZAxis}>
           <section className={styles.chatMessageComponent}>
-            <div className="chatMessageAccIcon">
-              <h1>ICON HERE, MUI, RESIZE</h1>
+            <div className={styles.chatMessageBar1}>
+              <div className={styles.chatMessageAccIcon}>
+                <h1 className={styles.placeholderMessageIcon}>ICON</h1>
+              </div>
             </div>
-            <div className="chatMessageBar1">
-              <h1>NAME, TIME</h1>
-            </div>
-            <div className="chatMessageBar2">
-              <h1>MESSAGE</h1>
+            <div className={styles.chatMessageBar2}>
+              <h1 className={styles.chatMessageName}>Tashi Sherpa</h1>
+              <h2 className={styles.chatMessageTime}>9:28 PM</h2>
+              <p className={styles.chatMessageMessage}>Hey, this is a placeholder chat!</p>
             </div>
           </section>
         </div>

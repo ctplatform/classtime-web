@@ -1,8 +1,41 @@
 .chatMessageZAxis {
     position: absolute;
-    display: inline-block;
+    margin: 0px;
     .chatMessageComponent {
-        width: 200px;
-        height: 50px;
+        display: flex;
+        flex-direction: row;
+    }
+    .chatMessageBar1 {
+        margin: 0px;
+    }
+    .chatMessageBar2 {
+        padding-left: 5px;
+    }
+    .chatMessageAccIcon {
+        background-color: red;
+        border-radius: 50%;
+        border: 0.5rem;
+        height: 25px;
+        display: inline-block;
+        .placeholderMessageIcon {
+            font-size: 0.9rem;
+        }
+    }
+    .chatMessageName {
+        display: inline-block;
+        font-size: 0.9rem;
+        margin: 5px 0 0 0;
+    }
+    .chatMessageTime {
+        display: inline-block;
+        font-size: 0.7rem;
+        margin: 0 0 0 4px;
+        color: #413F42;
+    }
+    .chatMessageMessage {
+        font-size: 0.82rem;
+        color: #7F8487;
+        margin: 0px;
+        max-width: 100px;
     }
 }
