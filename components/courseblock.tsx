@@ -1,17 +1,17 @@
 import styles from "./courseblock.module.scss";
 
-const CourseBlock = () => {
+const CourseBlock = ({ courseName, sectionNum, type }) => {
   return (
     <div className={styles.container}>
       <div className={styles.highlight}></div>
 
       <div className={styles.main}>
         <div className={styles.info}>
-          <p className={styles.name}>Computer Science I</p>
-          <p className={styles.section}>Section 7</p>
+          <p className={styles.name}>{courseName}</p>
+          <p className={styles.section}>Section {sectionNum}</p>
         </div>
 
-        <p className={styles.type}>Lecture</p>
+        <p className={styles.type}>{type}</p>
       </div>
     </div>
   );
