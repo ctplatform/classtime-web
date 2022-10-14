@@ -1,19 +1,23 @@
+//Note that we might switch to a grid later on
 .messageSection {
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    float: right;
-    min-height: 100vh;
-    min-width: 25%;
-    flex-direction: column;
-    border-width: 100px;
-    .messageClassName {
-
-    }
-    .messageDisplayMessage {
-        
-    }
-    .messageChatBox {
-
-    }
+  z-index: 2;
+  display: grid;
+  align-items: center;
+  float: right;
+  border-left: solid black;
+  min-height: 100vh;
+  min-width: 25%;
+  flex-direction: column;
+  border-width: 1rem;
+  text-align: center;
+  .messageClassName {
+    border-bottom: dashed black;
+  }
+  .messageDisplayMessage {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  .messageChatBox {
+    border-top: solid grey;
+  }
 }
