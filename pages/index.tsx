@@ -10,7 +10,6 @@ const Home: NextPage = () => {
       <Head>
         <title>Title</title>
       </Head>
-      <TextBar />
     </div>
   );
 };

@@ -1,8 +1,9 @@
 .container {
-  border: 1px solid;
+  margin-top: 100px;
+  margin-left: 100px;
   display: inline-block;
-  padding: 0.7rem 2rem;
-  padding-bottom: 0.85rem;
+  padding: 0.9rem 2rem;
+  padding-bottom: 1rem;
   width: 30rem;
   cursor: pointer;
   border-radius: 0.5rem;
@@ -16,6 +17,7 @@
     height: 100%;
     font-size: 13px;
     margin-right: 0.2rem;
+    background-color: rgb(235, 234, 234);
   }
 
   .input:focus {
@@ -25,5 +27,6 @@
   .icon {
     transform: rotate(-30deg);
     font-size: 18px;
+    color: rgb(148, 148, 148);
   }
 }
