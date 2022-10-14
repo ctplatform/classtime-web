@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Title</title>
       </Head>
-      <ChatMessage/>
+      <ChatMessage messageIcon="" messageName="Tashi Sherpa" messageTime="9:28 PM" messageText="Hello World"/>
     </div>
   );
 };

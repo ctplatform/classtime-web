@@ -16,26 +16,24 @@
         border-radius: 50%;
         border: 0.5rem;
         height: 25px;
+        width: 25px;
         display: inline-block;
-        .placeholderMessageIcon {
-            font-size: 0.9rem;
-        }
     }
     .chatMessageName {
         display: inline-block;
-        font-size: 0.9rem;
+        font-size: 1rem;
         margin: 5px 0 0 0;
     }
     .chatMessageTime {
         display: inline-block;
-        font-size: 0.7rem;
-        margin: 0 0 0 4px;
+        font-size: 0.65rem;
+        margin: 0 0 0 5px;
         color: #413F42;
     }
     .chatMessageMessage {
         font-size: 0.82rem;
         color: #7F8487;
-        margin: 0px;
-        max-width: 100px;
+        margin: 1px 0 0 1px;
+        max-width: 15vw;
     }
 }
