@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import ChatWindow from "../components/ChatWindow/ChatWindow";
+import TextBar from "../components/TextBar/TextBar";
 import styles from "../styles/Home.module.scss";
 import MessageDivider from "../components/MessageDivider/MessageDivider";
 const tmpMessages = [

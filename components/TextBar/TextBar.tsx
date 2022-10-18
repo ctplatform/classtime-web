@@ -16,13 +16,13 @@ const TextBar = () => {
       <form onSubmit={handleOnSubmit}>
         <input
           type="text"
-          placeholder="Type your message..."
+          placeholder="Say Something..."
           className={styles.input}
           value={currentMessage}
           onChange={(e) => setCurrentMessage(e.target.value)}
         />
-        <SendIcon className={styles.icon} />
       </form>
+      <SendIcon className={styles.icon} />
     </div>
   );
 };
