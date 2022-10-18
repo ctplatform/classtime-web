@@ -1,0 +1,22 @@
+.container {
+  .col {
+    display: flex;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+  .scheduleRow {
+    width: 5%;
+    font-size: medium;
+  }
+  .horizontalLine {
+    border-left: auto;
+    height: 2px solid black;
+  }
+  // make this smaller for cols
+  .rect {
+    height: 10rem;
+    width: 15rem;
+    border: 0.5rem solid black;
+    margin-bottom: 1rem;
+  }
+}
