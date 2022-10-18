@@ -1,4 +1,3 @@
-//Note that we might switch to a grid later on
 .messageSection {
   z-index: 2;
   display: grid;
@@ -14,8 +13,8 @@
     border-bottom: dashed black;
   }
   .messageDisplayMessage {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
   .messageChatBox {
     border-top: solid grey;

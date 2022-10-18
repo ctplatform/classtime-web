@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react";
 import styles from "./ChatWindow.module.scss";
 
 const ChatWindow = (props) => {
-  //In the future we need to replace 'Chat box here' with a hook
   return (
     <>
       <div className={styles.messageSection}>
