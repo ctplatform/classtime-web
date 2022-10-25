@@ -1,0 +1,9 @@
+REST /schedule
+
+Query Parameters
+(string)  scheduleID  The unique identifier for the schedule.
+
+Response (JSON)
+Schedule {
+  (string)  scheduleID  The unique identifier for the schedule.
+}
