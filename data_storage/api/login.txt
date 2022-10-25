@@ -1,0 +1,7 @@
+Login Model:
+
+string firstName: first name of the user
+string lastName: last name of the user
+string rcsID: rcsID string (the part in your email excluding @rpi.edu)
+string RIN: the 9-digit RPI identification number
+user userInfo: custom data structure "user" that stores user information including: course schedule, year of graduation, school year.
