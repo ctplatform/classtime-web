@@ -1,0 +1,8 @@
+Course Model: 
+
+(string)    courseName       The name of the course 
+(int)       courseNum        The section number  
+(type)      courseType       The type of the course 
+(int)       courseLength     The length of the course 
+(int)       courseQuantity   The number of classes weekly 
+(date)      courseStart      The times and days of the course per week 
