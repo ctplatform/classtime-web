@@ -4,3 +4,20 @@ It is developed and maintained by Microsoft, and is designed for the development
 applications and transpiles to JavaScript.
 
 It can be used for frontend JS and also be used for backend with Node.js.
+
+
+The pros of Typescript may contain: 
+More Rubust, 
+Easily Spot debug
+Predictibility
+Readability
+Popular.
+
+While the cons of Typescript may contain:
+More codes to write
+More to learn
+Required compilation
+.
+.
+.
+
