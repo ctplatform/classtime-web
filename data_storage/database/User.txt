@@ -1,0 +1,9 @@
+User Model:
+
+(string)    userID              The unique identifier for a user.
+(Date)      creationTimestamp   The time at which the user account was created.
+(string)    firstName           The user's first name.
+(string)    lastName            The user's last name.
+(string)    rcsID               The user's RCS identifier.
+(number)    RIN                 The user's RIN number.
+(Schedule)  schedule            The user's course schedule.
