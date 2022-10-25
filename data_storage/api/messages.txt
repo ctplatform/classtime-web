@@ -1,0 +1,13 @@
+REST /messages
+
+Query Parameters
+int writer: student RIN of writer of message
+string message: contains the content of the message
+string classCode: represents the class (Ex: CSCI_4380) this message is sent for
+
+Response (JSON)
+Schedule {
+  (int) writer: student RIN of writer of message
+  (string) message: contains the content of the message
+  (string) classCode: represents the class (Ex: CSCI_4380) this message is sent for
+}
