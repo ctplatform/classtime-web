@@ -1,0 +1,6 @@
+1- Make sure you have commited your changes
+2- find the directory that the clones github files are located locally on your computer
+3- open that directory in the command prompt
+4- run the command "npm run dev"(must have npm installed, see previous guide for installation help)
+5- you will see a url, to "local-host", click on this link or copy into web browser
+6- changes you make and commit should automatically update the page, so just refresh to see new changes
