@@ -1,0 +1,7 @@
+Message Model:
+
+(string)    username         The name/RIN of the user 
+(string)    courseName       The name of the course  
+(type)      courseType       The type of the course 
+(int)       messageLenth     The length of the message 
+(date)      sentDate         The times and day the message was sent  
