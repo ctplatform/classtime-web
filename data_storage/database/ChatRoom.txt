@@ -1,0 +1,7 @@
+ChatRoom Model: 
+
+(string)           roomId           Unique id for each room
+(string)           socektRoomId     Socket Room id. 
+(array[Users])     messages         Messages within the chat room. Has data about the user who sent the messages.
+(string)           courseNum        The courseNum the chat room is associated with.
+
