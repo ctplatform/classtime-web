@@ -1,6 +1,13 @@
 import styles from "./courseblock.module.scss";
 
-const CourseBlock = ({ courseName, sectionNum, type }) => {
+const CourseBlock = ({
+  courseName,
+  sectionNum,
+  type,
+  courseLength,
+  courseQuantity,
+  courseStart,
+}) => {
   return (
     <div className={styles.container}>
       <div className={styles.highlight}></div>
