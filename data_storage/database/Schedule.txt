@@ -1,0 +1,3 @@
+Schedule:
+
+(array of Courses) courses
