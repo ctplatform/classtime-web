@@ -3,12 +3,12 @@ import styles from "./courseblock.module.scss";
 function CourseBlock({
   courseName,
   section,
-  type,
+  blockType,
   color,
 }: {
   courseName: string;
   section: number;
-  type: string;
+  blockType: string;
   color: string;
 }) {
   return (
@@ -22,7 +22,7 @@ function CourseBlock({
         <span className={styles.name}>{courseName}</span>
         <span className={styles.section}>Section {section}</span>
 
-        <span className={styles.type}>{type}</span>
+        <span className={styles.blocktype}>{blockType}</span>
       </div>
     </div>
   );
