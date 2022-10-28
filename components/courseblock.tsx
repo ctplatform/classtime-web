@@ -1,13 +1,14 @@
 import styles from "./courseblock.module.scss";
 
-const CourseBlock = ({
+function CourseBlock({
   courseName,
-  sectionNum,
+  section,
   type,
-  courseLength,
-  courseQuantity,
-  courseStart,
-}) => {
+}: {
+  courseName: string;
+  section: number;
+  type: string;
+}) {
   return (
     <div className={styles.container}>
       <div className={styles.highlight}></div>
@@ -15,13 +16,13 @@ const CourseBlock = ({
       <div className={styles.main}>
         <div className={styles.info}>
           <p className={styles.name}>{courseName}</p>
-          <p className={styles.section}>Section {sectionNum}</p>
+          <p className={styles.section}>Section {section}</p>
         </div>
 
         <p className={styles.type}>{type}</p>
       </div>
     </div>
   );
-};
+}
 
 export default CourseBlock;
