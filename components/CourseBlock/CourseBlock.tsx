@@ -1,4 +1,4 @@
-import styles from "./courseblock.module.scss";
+import styles from "./CourseBlock.module.scss";
 
 function CourseBlock({
   courseName,
