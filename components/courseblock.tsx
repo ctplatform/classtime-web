@@ -14,12 +14,10 @@ function CourseBlock({
       <div className={styles.highlight}></div>
 
       <div className={styles.main}>
-        <div className={styles.info}>
-          <p className={styles.name}>{courseName}</p>
-          <p className={styles.section}>Section {section}</p>
-        </div>
+        <span className={styles.name}>{courseName}</span>
+        <span className={styles.section}>Section {section}</span>
 
-        <p className={styles.type}>{type}</p>
+        <span className={styles.type}>{type}</span>
       </div>
     </div>
   );
