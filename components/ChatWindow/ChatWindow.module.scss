@@ -1,0 +1,22 @@
+.messageSection {
+  z-index: 2;
+  display: grid;
+  align-items: center;
+  float: right;
+  border-left: solid black;
+  min-height: 100vh;
+  min-width: 25%;
+  flex-direction: column;
+  border-width: 1rem;
+  text-align: center;
+  .messageClassName {
+    border-bottom: dashed black;
+  }
+  .messageDisplayMessage {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .messageChatBox {
+    border-top: solid grey;
+  }
+}
