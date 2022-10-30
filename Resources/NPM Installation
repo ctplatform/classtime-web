@@ -1,0 +1,42 @@
+Any project that's using Node.js will need to have a package.json file. A package.json file can be described as a 
+manifest of your project that includes the packages and applications it depends on, information about its unique 
+source control, and specific metadata like the project's name, description, and author.
+A package.json file usually contains datas with project's name, version, description, license, and keywords.
+
+Downloading NPM only needs one command line:
+npm install -g npm
+
+We could also use Node installer, with running
+-o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+And then, using 
+node -v
+npm -v
+can check the installed version, if we have node.js installed as well. 
+
+Then, using npm init command is a step-by-step tool to scaffold out your project. 
+It will prompt you for input for a few aspects of the project as mentioned above. More specificly, they should contain:
+
+The project's name,
+The project's initial version,
+The project's description,
+The project's entry point (meaning the project's main file),
+The project's test command (to trigger testing with something like Standard)
+The project's git repository (where the project source can be found)
+The project's keywords (basically, tags related to the project)
+The project's license (this defaults to ISC - most open-source Node.js projects are MIT)
+
+We can used the command Return or Enter to accept the suggestion and move on to the next prompt.
+
+
+using
+npm install <module>
+can installing modules from npm. For example,if we want to install Express (the most used and most well known Node.js 
+web framework), we could run the following command:
+
+npm install express
+
+And Finally, if we wish to install a module from npm globally, we could just simply use the --global after the module.
+For example:
+npm install <module> --global # Where <module> is the name of the module you want to install globally
+npm install <module> -g # Where <module> is the name of the module you want to install globally, using the -g alias

@@ -1,0 +1,35 @@
+Our project also require using Node.js to run. Node.js is an open-source, cross-platform, back-end JavaScript 
+runtime environment that runs on a JavaScript Engine and executes JavaScript code outside a web browser, 
+which was designed to build scalable network applications. It is used for server-side programming, and primarily 
+deployed for non-blocking, event-driven servers, such as traditional web sites and back-end API services, 
+but was originally designed with real-time, push-based architectures in mind. Every browser has its own version 
+of a JS engine, and node.
+ 
+The installation of Node.js is very simple. Go to
+https://nodejs.org/en/
+and there will be different options for different operating systems
+
+
+After we finished installing the Node.js, we could try to build a really simply web server. 
+For example, using the codes below:
+
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+and run it using the command 
+
+node app.js
+
+Then bisit http://localhost:3000 will generate a message saying "Hello World".
