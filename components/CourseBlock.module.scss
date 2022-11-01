@@ -1,4 +1,6 @@
 .container {
+  // the dimensions of the courseblock component
+  // and that it is a flex to align elements
   display: flex;
   align-items: stretch;
 
@@ -7,9 +9,11 @@
   height: 5.5rem;
   width: 16.5rem;
 
+  // styling regarding the component
   border-radius: 0.7rem;
   box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.2);
 
+  // the color
   .highlight {
     border-radius: 0.5rem;
     background-color: black;
@@ -20,6 +24,7 @@
     margin-right: 0.75rem;
   }
 
+  // the text
   .text {
     display: flex;
     flex-direction: column;
