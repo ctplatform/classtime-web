@@ -1,6 +1,6 @@
 .chatMessageZAxis {
     position: absolute;
-    margin: 0px;
+    margin: 12px 0 12px 0;
     .chatMessageComponent {
         display: flex;
         flex-direction: row;
@@ -17,9 +17,10 @@
         border: 0.5rem;
         height: 25px;
         width: 25px;
-        display: table-cell;
-        vertical-align: middle;
+        display: absolute;
         text-align: center;
+        padding: 6.25px 0 0 0;
+        margin-top: 4px;
         .chatMessageIconChar {
             display: inline-block;
             color: white;
@@ -35,12 +36,13 @@
         display: inline-block;
         font-size: 0.65rem;
         margin: 0 0 0 5px;
-        color: #413F42;
+        color: #787878;
     }
     .chatMessageMessage {
         font-size: 0.82rem;
         color: #7F8487;
-        margin: 1px 0 0 1px;
-        max-width: 15vw;
+        margin-top: 2px;
+        max-width: 16vw;
+        line-height: 10px;
     }
 }
