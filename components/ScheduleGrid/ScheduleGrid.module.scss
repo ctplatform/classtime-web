@@ -1,0 +1,21 @@
+.container {
+  .row {
+    display: flex;
+    padding-left: 5%;
+    padding-top: 5%;
+  }
+  .scheduleCol {
+    width: 25%;
+    font-size: medium;
+  }
+  .vertline {
+    border-left: 0.2rem solid black;
+    height: auto;
+  }
+  .rect {
+    height: 60rem;
+    width: 20rem;
+    border: 0.2rem solid black;
+    margin-left: 1rem;
+  }
+}
