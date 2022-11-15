@@ -6,3 +6,54 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+enum DOTW {
+  Sunday
+  Monday
+  Tuesday
+  Wednesday
+  Thursday
+  Friday
+  Saturday
+}
+
+model User {
+  id                 String    @id @default(uuid())
+  creationTimestamp  DateTime  @default(now())
+  firstName          String
+  lastName           String
+  preferredFirstName String?
+  preferredLastName  String?
+  RIN                Int       @unique
+  rcsID              String    @unique
+  scheduleID         String    @unique
+  schedule           Schedule? @relation(fields: [scheduleID], references: [id])
+}
+
+model Schedule {
+  id        String   @id @default(uuid())
+  user      User?
+  courseIDs String[]
+  courses   Course[]
+}
+
+model Course {
+  id  String @id @default(uuid())
+  CRN Int?   @unique
+
+  scheduleIDs String[]
+  schedules   Schedule[]
+
+  blocks CourseBlock[]
+}
+
+model CourseBlock {
+  id String @id @default(uuid())
+
+  courseID String
+  course   Course @relation(fields: [courseID], references: [id])
+
+  day       DOTW
+  startTime Int
+  duration  Int
+}
