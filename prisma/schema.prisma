@@ -28,16 +28,17 @@ model User {
   rcsID              String    @unique
   scheduleID         String    @unique
   schedule           Schedule? @relation(fields: [scheduleID], references: [id])
+  messages           Message[]
 }
 
 model Schedule {
-  id        String   @id @default(uuid())
-  user      User?
-  courseIDs String[]
-  courses   Course[]
+  id               String          @id @default(uuid())
+  user             User?
+  courseSectionIDs String[]
+  courses          CourseSection[]
 }
 
-model Course {
+model CourseSection {
   id  String @id @default(uuid())
   CRN Int?   @unique
 
@@ -45,15 +46,40 @@ model Course {
   schedules   Schedule[]
 
   blocks CourseBlock[]
+
+  chatRoomID String    @unique
+  chatRoom   ChatRoom? @relation(fields: [chatRoomID], references: [id])
 }
 
 model CourseBlock {
   id String @id @default(uuid())
 
-  courseID String
-  course   Course @relation(fields: [courseID], references: [id])
+  courseSectionID String
+  courseSection   CourseSection @relation(fields: [courseSectionID], references: [id])
 
   day       DOTW
   startTime Int
   duration  Int
+}
+
+model ChatRoom {
+  id String @id @default(uuid())
+
+  courseSection CourseSection?
+  messages      Message[]
+}
+
+model Message {
+  id String @id @default(uuid())
+
+  authorID String
+  author   User   @relation(fields: [authorID], references: [id])
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
+
+  chatRoomID String
+  chatRoom   ChatRoom @relation(fields: [chatRoomID], references: [id])
+
+  content String
 }
