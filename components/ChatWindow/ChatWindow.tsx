@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import TextBar from "../TextBar/TextBar";
 import styles from "./ChatWindow.module.scss";
 import io from "socket.io-client";
@@ -15,6 +15,37 @@ const ChatWindow = (props: any) => {
 
   //Stores data about the current room
   const [room, setRoom] = useState<any>({});
+
+  const [message, setMessage] = useState(""); //message box input state variable
+  const [info, setInfo] = useState({ name: "", location: "" }); //Current friend location, name
+  const [menu, setMenu] = useState(false); //state variable for side bar on mobile view.
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const handleMenu = useCallback(() => setMenu(!menu));
+  const handleClick = () => {
+    let condition: any = false;
+    if (window.innerWidth <= 826 && menu === true) {
+      condition = setMenu(!menu);
+    }
+    return condition;
+  };
+
+  //These are refs to make sure the input msg box is focused on refresh
+  //and that the msg scrolls down when messages are sent
+  const inputRef = useRef(null);
+  const msgSecRef = useRef(null);
+
+  //I think this is how we would handle submit.
+  //  const handleSubmit = (e) => {
+  //    e.preventDefault();
+  //    socket.emit("message", {
+  //      userID: user._id,
+  //      roomID: room.roomID,
+  //      message: message,
+  //      roomNum: room.room,
+  //    });
+  //    setMessage("");
+  //  };
 
   useEffect(() => {
     /* This is where I will adding socket event listeners. 
@@ -61,14 +92,31 @@ const ChatWindow = (props: any) => {
       setRoom({ ...room, messages: newMessages });
     };
 
+    //Sent from Backend --> After second user wants to add a class
+    //First user updates  The website should update anonymous
+    // with new username
+    const ClassJoinedHandler = ({ name, roomID, location }) => {
+      let updatedUserFriend = user;
+      updatedUserFriend.map((friend) => {
+        if (friend.roomID === roomID) {
+          friend.name = name;
+        }
+        return friend;
+      });
+      setUser({ ...user, friends: updatedUserFriend });
+    };
+
     //Update user, make api request to update currentMessages
     socket.on("join-room", joinRoomHandler);
 
     socket.on("message", messageHandler);
 
+    socket.on("class-joined", ClassJoinedHandler);
+
     return () => {
       socket.off("join-room", joinRoomHandler);
       socket.off("message", messageHandler);
+      socket.off("class-joined", ClassJoinedHandler);
     };
   }, []);
 
