@@ -6,9 +6,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     if (typeof req.query.id !== "string") return res.status(400).end("Invalid Identifier");
 
-    const messages = await prisma.chatRoom.findFirst({
+    const courseSection = await prisma.courseSection.findFirst({
         where: {id: req.query.id},
     });
 
-    res.status(200).json(messages);
+    res.status(200).json(courseSection);
 }
