@@ -10,9 +10,9 @@ export default async function handler(
   if (typeof req.query.id !== "string")
     return res.status(400).end("Invalid Identifier");
 
-  const courseSection = await prisma.message.findFirst({
+  const user = await prisma.user.findFirst({
     where: { id: req.query.id },
   });
 
-  res.status(200).json(courseSection);
+  res.status(200).json(user);
 }
