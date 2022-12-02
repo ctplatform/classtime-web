@@ -1,4 +1,4 @@
-import { User } from "@prisma/client";
+import { Message, User } from "@prisma/client";
 import { testApiHandler } from "next-test-api-route-handler";
 import { prismaMock } from "../../singleton";
 import handler from "../../../pages/api/user/[id]";
