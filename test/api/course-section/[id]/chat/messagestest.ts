@@ -1,16 +1,38 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import prisma from "../../../../../prisma/client";
+import { Message } from "@prisma/client";
+import { testApiHandler } from "next-test-api-route-handler";
+import { prismaMock } from "../../../../singleton";
+import handler from "../../../../../pages/api/course-section/[id]/chat/messages";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
-    if (req.method !== "GET") return res.status(405).end()
-
-    if (typeof req.query.id !== "string") return res.status(400).end("Invalid Identifier");
-
-    const courseSection = await prisma.courseSection.findFirst({
-        where: {id: req.query.id},
+describe ("/api/course-section/[id]/chat/messages", () => {
+    it("should return messages", async () => {
+        const id = "chatroom_id";
+        const messages = {
+            id,
+            createdAt = 
+        } 
+        as Message;
+        await testApiHandler<Message | null>({
+            handler,
+            paramsPatcher: (params) => (params.id = id),
+            test: async ({ fetch }) => {
+            prismaMock.message.findFirst.mockResolvedValueOnce(messages);
+            const res = await fetch();
+            expect(res.status).toBe(200);
+            expect(res.json()).resolves.toStrictEqual(messages);
+        },
     });
-
-    res.status(200).json(courseSection);
-
-    
-}
+});
+  it("should return null", async () => {
+    const id = "chatroom_id";
+    await testApiHandler<User | null>({
+      handler,
+      paramsPatcher: (params) => (params.id = id),
+      test: async ({ fetch }) => {
+        prismaMock.message.findFirst.mockResolvedValue(null);
+        const res = await fetch();
+        expect(res.status).toBe(200);
+        expect(res.json()).resolves.toBeNull();
+      },
+    });
+  });
+});

@@ -37,12 +37,3 @@ describe("/api/user/[id]", () => {
     });
   });
 });
-
-describe("/api/course-section/[id]/chat/[send]", () => {
-  it("should return messages", async () => {
-    const id = "chatroom_id";
-    const messages {
-      Message,
-    }
-  })
-});
