@@ -1,4 +1,4 @@
-import { Message } from "@prisma/client";
+import { User, Message } from "@prisma/client";
 import { testApiHandler } from "next-test-api-route-handler";
 import { prismaMock } from "../../../../singleton";
 import handler from "../../../../../pages/api/course-section/[id]/chat/messages";
@@ -6,16 +6,20 @@ import handler from "../../../../../pages/api/course-section/[id]/chat/messages"
 describe ("/api/course-section/[id]/chat/messages", () => {
     it("should return messages", async () => {
         const id = "chatroom_id";
+        const user = {
+
+        } as User;
         const messages = {
             id,
-            createdAt = 
-        } 
-        as Message;
+            firstName = "firstName",
+            lastName = "lastName",
+            content="this is it!",
+        } as Message;
         await testApiHandler<Message | null>({
             handler,
             paramsPatcher: (params) => (params.id = id),
             test: async ({ fetch }) => {
-            prismaMock.message.findFirst.mockResolvedValueOnce(messages);
+            prismaMock.user.findFirst.mockResolvedValueOnce(messages);
             const res = await fetch();
             expect(res.status).toBe(200);
             expect(res.json()).resolves.toStrictEqual(messages);
@@ -28,7 +32,7 @@ describe ("/api/course-section/[id]/chat/messages", () => {
       handler,
       paramsPatcher: (params) => (params.id = id),
       test: async ({ fetch }) => {
-        prismaMock.message.findFirst.mockResolvedValue(null);
+        prismaMock.user.findFirst.mockResolvedValue(null);
         const res = await fetch();
         expect(res.status).toBe(200);
         expect(res.json()).resolves.toBeNull();
