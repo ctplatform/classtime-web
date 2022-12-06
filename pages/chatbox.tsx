@@ -1,31 +1,45 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
-import * as WebSocket from 'ws';
+import React, { useState } from 'react';
 
-const wss = new WebSocket.Server({ port: 8080 });
+const ChatBox = () => {
+// state to store messages
+const [messages, setMessages] = useState([]);
 
-//Array to store all messages
-let messages: string[] = [];
+// function to handle message submission
+const handleSubmit = (e) => {
+e.preventDefault();
 
-wss.on('connection', (ws: WebSocket) => {
-//Send all previous messages to the new user
-messages.forEach(message => {
-ws.send(message);
-});
+// get the message from the input
+const input = e.target.elements.message;
+const message = input.value;
 
-ws.on('message', (message: string) => {
-//Add the new message to the array of messages
-messages.push(message);
+// add the message to the messages state
+setMessages([messages, message]);
 
-//Broadcast the message to all connected users
-wss.clients.forEach((client: WebSocket) => {
-  if (client !== ws && client.readyState === WebSocket.OPEN) {
-    client.send(message);
-  }
-});
-});
-});
+// clear the input
+input.value = '';
+}
 
-console.log('Chat server running on port 8080');
-export default Home;
+// function to display messages
+const displayMessages = () => {
+return messages.map((message, index) => <p key={index}>{message}</p>);
+}
+
+return (
+<div>
+{/* form to submit messages */}
+<form onSubmit={handleSubmit}>
+<input type="text" name="message" />
+<button type="submit">Send</button>
+</form>
+
+Copy code
+  {/* display messages */}
+  {displayMessages()}
+</div>
+);
+}
+
+export default ChatBox;
