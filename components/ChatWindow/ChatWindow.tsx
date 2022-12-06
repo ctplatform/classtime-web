@@ -122,23 +122,41 @@ const ChatWindow = (props: any) => {
 
   return (
     <>
-      <div className={styles.messageSection}>
-        <div className={styles.messageClassName}>
-          <h1>{props.name}</h1>
-        </div>
-        <div className={styles.messageDisplayMessage}>
-          {messages.map((message) => {
-            return (
-              <div className={styles.messageWrapper} key={message._id}>
-                <p className={styles.msg}>{message.msg}</p>
+      <section>
+        <section className="main">
+          {/* the element above the chat UI */}
+          <div className="header">
+            <section className="information">
+              <div className="name-location">
+                <p className="id">{info.name}</p>
+                <p className="location">{info.location}</p>
               </div>
-            );
-          })}
-        </div>
-        <div className={styles.messageChatBox}>
-          <TextBar />
-        </div>
-      </div>
+            </section>
+          </div>
+
+          {/* the section containing the messages */}
+          <div className="messages-chat" onClick={handleClick} ref={msgSecRef}>
+            {messages.map((message) => {
+              return (
+                <div className={styles.messageWrapper} key={message._id}>
+                  <p className={styles.msg}>{message.msg}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          <form className="message-input" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              className="message-box"
+              placeholder="Type your message here..."
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              ref={inputRef}
+            />
+          </form>
+        </section>
+      </section>
     </>
   );
 };
