@@ -1,0 +1,13 @@
+REST /message-edit
+
+Query Parameters
+int writer: student RIN of writer of message
+string message: contains the content of the message
+string edit: contains contents of the new edited message
+string classCode: represents the class (Ex: CSCI_4380) this message is sent for
+
+Response (JSON){
+  (int) writer: student RIN of writer of message
+  (string) edit: contains the content of edited message
+  (string) classCode: represents the class (Ex: CSCI_4380) this message is sent for
+}
