@@ -1,0 +1,9 @@
+REST /message-delete
+
+Query Parameters
+int writer: student RIN of writer of message
+string message: contains the content of the message
+string classCode: represents the class (Ex: CSCI_4380) this message is sent for
+
+Response (JSON)
+deletes specified message with contents of string message.
