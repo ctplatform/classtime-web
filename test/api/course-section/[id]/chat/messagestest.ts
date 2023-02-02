@@ -11,9 +11,9 @@ describe ("/api/course-section/[id]/chat/messages", () => {
         } as User;
         const messages = {
             id,
-            firstName = "firstName",
-            lastName = "lastName",
-            content="this is it!",
+            firstName: "firstName",
+            lastName: "lastName",
+            content: "this is it!",
         } as Message;
         await testApiHandler<Message | null>({
             handler,
